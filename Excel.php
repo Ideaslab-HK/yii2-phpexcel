@@ -537,7 +537,7 @@ class Excel extends \yii\base\Widget
 			$row++;
 			
 			if($this->autoSize){
-				foreach (range(0, $colnum) as $col) {
+				foreach (range(0, count($columns)) as $col) {
 					$activeSheet->getColumnDimensionByColumn($col)->setAutoSize(true);
 				}
 			}
